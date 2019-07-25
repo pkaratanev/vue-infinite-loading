@@ -314,7 +314,6 @@ export default {
     */
     getScrollParent(elm = this.$el) {
       let result;
-
       if (typeof this.forceUseInfiniteWrapper === 'string') {
         result = elm.querySelector(this.forceUseInfiniteWrapper);
       }
@@ -327,6 +326,10 @@ export default {
         } else if (elm.hasAttribute('infinite-wrapper') || elm.hasAttribute('data-infinite-wrapper')) {
           result = elm;
         }
+      }
+
+      if (!result && elm.parentNode === null) {
+        return this.$el;
       }
 
       return result || this.getScrollParent(elm.parentNode);

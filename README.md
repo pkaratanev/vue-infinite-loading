@@ -1,3 +1,9 @@
+This is a fork of the original repository. The reason for the fork is this issue -> https://github.com/PeachScript/vue-infinite-loading/issues/208
+
+Below is the README from the original repository.
+
+---
+
 <p align="center"><img width="200" src="http://www.peachis.me/assets/vue-infinite-loading/logo.png"></p>
 <p align="center">
   <a href="https://travis-ci.org/PeachScript/vue-infinite-loading"><img src="https://img.shields.io/travis/PeachScript/vue-infinite-loading/master.svg"></a>
