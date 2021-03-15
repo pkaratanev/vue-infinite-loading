@@ -4,7 +4,7 @@
       class="infinite-status-prompt"
       v-show="isShowSpinner"
       :style="slotStyles.spinner">
-      <slot name="spinner">
+      <slot name="spinner" v-bind="{ isFirstLoad }">
         <spinner :spinner="spinner" />
       </slot>
     </div>
@@ -315,7 +315,7 @@ export default {
     getScrollParent(elm = this.$el) {
       let result;
       if (typeof this.forceUseInfiniteWrapper === 'string') {
-        result = elm.querySelector(this.forceUseInfiniteWrapper);
+        result = document.querySelector(this.forceUseInfiniteWrapper);
       }
 
       if (!result) {
